@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylel.css">
+    <title>Calculator</title>
+</head>
+<body>
+    <div id="calculator">
+        <input type="text" id="display">
+
+        <div id="buttons">
+            <button data-value="7" onclick="Solve('7')">7</button>
+            <button data-value="8" onclick="Solve('8')" >8</button>
+            <button data-value="9"onclick="Solve('9')">9</button>
+            <button class="operator" data-value="/"onclick="Solve('/')"> <img src="images/division.jpg" style="height:10px ;"> </button>
+
+            <button data-value="4"onclick="Solve('4')">4</button>
+            <button data-value="5"onclick="Solve('5')">5</button>
+            <button data-value="6"onclick="Solve('6')">6</button>
+            <button class="operator" data-value="*" onclick="Solve('*')"> <img src="images/mul.jpg" style="height:10px ;"> </button>
+
+            <button data-value="1"onclick="Solve('1')">1</button>
+            <button data-value="2"onclick="Solve('2')">2</button>
+            <button data-value="3"onclick="Solve('3')">3</button>
+            <button  class="operator" data-value="-"onclick="Solve('-')"> - </button>
+
+            <button data-value="0"onclick="Solve('0')">0</button>
+            <button data-value="."onclick="Solve('.')">.</button>
+            <button  class="operator" data-value="+"onclick="Solve('+')">+</button>
+            <button  id="res" data-value="="onclick="Result()" style="background-color: orange;"> = </button>
+
+        </div>
+
+
+    </div>
+    <script src="myScript.js"></script>
+</body>
+</html>
