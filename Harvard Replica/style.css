@@ -1,0 +1,303 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.top-header {
+  background-color: #a51c30;
+  padding: 0.6rem 4rem;
+}
+header {
+  width: 100%;
+}
+.header {
+  display: flex;
+  align-items: center;
+  padding: 1.5rem 4rem;
+  justify-content: space-between;
+}
+.logo {
+  width: 30%;
+  
+}
+.search-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0.5rem 0.5rem;
+  background-color: #2b416e;
+  color: white;
+  cursor: pointer;
+}
+.search-btn p {
+  margin-top: 1rem;
+}
+.search-btn img {
+  width: 1.5rem;
+}
+.search {
+  display: flex;
+  align-items: stretch;
+  gap: 0.5rem;
+}
+.search input {
+  padding: 1rem 1.5rem;
+  width: 18rem;
+}
+
+.header-links {
+  display: flex;
+  align-items: start;
+  justify-content: end;
+  padding-right: 4rem;
+}
+.header-links a {
+  text-decoration: none;
+  text-align: right;
+  margin-left: 1rem;
+  color: #2a7bc6;
+}
+
+.header-links a:hover {
+  text-decoration: underline;
+}
+nav {
+  padding-left: 4rem;
+  margin-top: 1rem;
+}
+nav a {
+  text-decoration: none;
+  color: #1e1e1e;
+  margin-right: 2rem;
+  font-size: 1.5rem;
+  padding: 0.5rem;
+}
+nav a:hover {
+  background-color: #a51c30;
+  text-decoration: underline;
+  color: white;
+}
+.bg {
+  margin-top: 2rem;
+  padding: 4rem 14rem;
+  background-image: url("./images/hc-018_01.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.bg div {
+  background-color: white;
+  padding: 2rem;
+}
+
+.bg div h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.bg div p {
+  margin-bottom: 1rem;
+}
+
+.btn {
+  background-color: #2b416e;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  color: white;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: white;
+  color: black;
+  outline: 2px solid #2b416e;
+  cursor: pointer;
+}
+
+.about {
+  position: relative;
+}
+.about h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.about div {
+  position: absolute;
+  width: 4rem;
+  height: 5px;
+  background-color: #a51c30;
+  top: -1rem;
+}
+
+.txt {
+  font-size: 1.2rem;
+}
+.cards {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 2rem;
+}
+.card {
+  border: 1px solid black;
+  cursor: pointer;
+  flex: 1;
+}
+.card:hover div {
+  background-color: rgb(242, 242, 242);
+}
+.card:hover div a {
+  text-decoration: none;
+}
+.card div {
+  padding: 1rem;
+}
+.card div a {
+  color: #2a659c;
+  font-size: 1.2rem;
+}
+.card div p {
+  margin-top: 1rem;
+}
+.announcement {
+  margin-top: 4rem;
+  padding: 4rem 4rem 2rem 4rem;
+  background-color: #f3f3f4;
+}
+
+.btn-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 2rem;
+}
+.date {
+  font-size: 0.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.welcome-container {
+  margin: 30px;
+  position: relative;
+  background-color: #ebe8e5;
+  display: flex;
+  align-items: start;
+  margin: 5rem 5rem;
+}
+.welcome-container img {
+  width: 12rem;
+}
+.content {
+  padding: 2rem;
+}
+.content h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+p {
+  margin-bottom: 20px;
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.signature {
+  margin-top: 40px;
+  font-style: italic;
+}
+
+.name {
+  font-weight: bold;
+  font-style: normal;
+  margin-top: 5px;
+}
+
+.title {
+  color: #555;
+  font-size: 16px;
+}
+.msg p {
+  font-size: 0.8rem;
+  width: 80%;
+}
+.sf {
+  font-weight: bold;
+  font-size: 1rem;
+}
+.footer {
+  margin: 0 10rem;
+}
+.footer-top {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  padding: 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+.logo img {
+  max-height: 40px;
+}
+
+.contact-info {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+}
+
+.contact-info p {
+  font-size: 0.8rem;
+  margin-bottom: 5px;
+  color: #333;
+}
+.contact {
+  margin-top: 1rem;
+}
+.contact a {
+  color: #003366;
+  font-size: 0.8rem;
+}
+
+.admin-login {
+  text-align: right;
+  align-self: flex-end;
+}
+
+.admin-link {
+  color: #003366;
+}
+
+.footer-bottom {
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 10px 12rem;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.footer-bottom p {
+  font-size: 0.8rem;
+  text-wrap: nowrap;
+  margin-top: 15px;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.footer-links a {
+  color: white;
+  font-size: 0.8rem;
+  text-wrap: nowrap;
+}
