@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Md. Sajjad Mojumder Anik- Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <!-- Logo -->
+            <div class="logo">
+                <div class="logo-icon">
+                    <div class="initials">SMA</div>
+                </div>
+                <div class="logo-text">
+                    <div class="name">Md. Sajjad Mojumder Anik</div>
+                    <div class="title">PORTFOLIO</div>
+                </div>
+            </div>
+
+            <!-- Status Banner -->
+            <div class="status-banner">
+                <span class="status-indicator"></span>
+                Welcome To My Portfolio
+            </div>
+
+            <!-- Navigation Buttons -->
+            <div class="nav-buttons">
+                <div class="nav-buttons">
+                <button class="search-btn" onclick="scrollToSection('search')">
+                  <i class="fas fa-search"></i> Search
+                </button>
+              </div>
+                <button class="menu-btn" id="menuToggle">
+                    ☰ Menu
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <div class="mobile-menu-logo">
+                <div class="logo-icon">
+                    <div class="initials">SMA</div>
+                </div>
+                <div class="logo-text">
+                    <div class="name">Md. Sajjad Mojumder Anik</div>
+                    <div class="title">PORTFOLIO</div>
+                </div>
+            </div>
+            <button class="close-btn" id="closeMenu">
+                <span class="close-icon">✕</span>
+                <span class="close-text">Close</span>
+            </button>
+        </div>
+
+        <nav class="mobile-nav">
+            <a href="#about" class="nav-item" onclick="closeMenuAndScroll('about')">About</a>
+            <a href="#projects" class="nav-item" onclick="closeMenuAndScroll('projects')">Projects</a>
+            <a href="#Publication" class="nav-item" onclick="closeMenuAndScroll('publication')">Publication</a>
+            <a href="#skills" class="nav-item" onclick="closeMenuAndScroll('skills')">Skills</a>
+            <a href="#contact" class="nav-item" onclick="closeMenuAndScroll('contact')">Contact</a>
+        </nav>
+
+        <div class="mobile-menu-footer">
+            <div class="quick-links-title">Quick Links</div>
+            <div class="quick-links">
+                <a href="#" class="quick-link">Resume</a>
+                <a href="#" class="quick-link">LinkedIn</a>
+                <a href="#" class="quick-link">GitHub</a>
+                <a href="#" class="quick-link">Email</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+    <div class="hero-background"></div>
+    <div class="hero-content">
+        <h1 class="hero-title">Md. Sajjad Mojumder Anik</h1>
+        <p class="hero-subtitle"> "Front-End Developer & Researcher dedicated to building seamless user experiences and advancing technology through innovative, forward-thinking research."</p>
+    </div>
+</section>
+
+
+<!-- Impact Section -->
+<!-- Impact Section -->
+<section class="impact-section">
+  <div class="impact-container">
+    <div class="impact-text">
+      <h2>My Impact</h2>
+    </div>
+    <div class="impact-description">
+      <p>"Exploring how my work bridges technology and design to shape engaging digital experiences and innovative solutions."</p>
+      <a href="https://github.com/Sajjad5640?tab=repositories" class="impact-button">
+        <span class="circle">→</span>
+        <span class="button-text">Explore my projects</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Stats Section -->
+<section class="stats-section">
+  <div class="stats-container">
+    <div class="stat-box">
+      <h2>14 Projects</h2>
+      <p><strong>Successfully completed front-end and research projects</strong></p>
+    </div>
+    <div class="stat-box">
+      <h2>1000+ Hours</h2>
+      <p><strong>Dedicated to coding, design, and research</strong></p>
+    </div>
+    <div class="stat-box">
+      <h2>15 Github Stars</h2>
+      <p><strong>On open source repositories I contributed to</strong></p>
+    </div>
+  </div>
+</section>
+
+<!-- Lab to Market Section -->
+<section class="enterprise-section">
+  <div class="enterprise-container">
+    <div class="enterprise-text">
+     <h2>Where Ideas Meet Execution</h2>
+      <p>Fusing creativity and code, I bring innovative concepts to life—building digital solutions that inform, engage, and inspire.</p>
+
+    </div>
+    <div class="enterprise-media">
+      <div class="video-thumbnail">
+        <img src="../Image/idea.avif" alt="Portfolio Demo"> 
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+    <!-- About Section -->
+<section class="about" id="about">
+    <div class="container">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <h3>Front-End Developer & Researcher</h3>
+                <p>I’m Md. Sajjad Mojumder Anik, a dedicated front-end developer and researcher driven by the goal of creating visually engaging, accessible, and high-performance web applications. I focus on writing clean, efficient code and designing interfaces that deliver seamless user experiences.</p>
+                <p>With practical experience in both academic research and modern web development, I enjoy working at the crossroads of creativity and technology. I'm passionate about exploring new tools, contributing to impactful projects, and using innovation to address real-world challenges.</p>
+
+                <!-- Social Links for Developer & Research Profiles -->
+                <div class="about-links">
+                <a href="https://github.com/Sajjad5640/WEBLab-Assesments.git" class="social-btn" target="_blank">
+                <i class="fab fa-github"></i> GitHub                   
+               </a>
+                    <a href="https://scholar.google.com/citations?user=rzoKKsAAAAAJ&hl=en" class="social-btn" target="_blank">
+                        <i class="fas fa-graduation-cap"></i> Google Scholar
+                    </a>
+                    <a href="https://www.researchgate.net/profile/Md-Sajjad-Anik?ev=hdr_xprf" class="social-btn" target="_blank">
+                        <i class="fas fa-flask"></i> ResearchGate
+                    </a>
+                </div>
+            </div>
+
+            <div class="about-stats">
+                <div class="stat">
+                    <div class="stat-number">14</div>
+                    <div class="stat-label">Projects Completed</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">3</div>
+                    <div class="stat-label">Research Papers</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Passion & Commitment</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-image">
+                        <img src="../Image/p1.jpg" alt="Screenshot of EduLink Hub project">
+                        </div>
+
+                    </div>
+                    <div class="project-content">
+                        <h3>Eco & fasiony</h3>
+                        <p>Eco & Fashiony is a modern, eco-conscious fashion platform that bridges the gap between sustainability and style. It is designed to promote ethical fashion brands, encourage green consumer choices, and provide users with a curated selection of eco-friendly clothing, accessories, and lifestyle products..</p>
+                       
+                        <a href="https://github.com/Sajjad5640/Final-Project-Eco-and-Fashiony.git" target="_blank" class="project-btn">View Project</a>
+
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                    <img src="../Image/p2.png" alt="Screenshot of EduLink Hub project">
+                    </div>
+                    <div class="project-content">
+                        <h3>Dropout Prediction</h3>
+                        <p>Dropout prediction refers to the use of data analysis, machine learning (ML), or deep learning (DL) techniques to identify students at risk of discontinuing their studies before completion. By analyzing behavioral, academic, and socio-demographic patterns, educational institutions can intervene early to reduce dropout rates and improve student success.</p>
+                        
+                         <a href="http://ieeexplore.ieee.org/document/11012934" target="_blank" class="project-btn">View Project</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                      <img src="../Image/logo.png" alt="Screenshot of EduLink Hub project">
+                    </div>
+                    <div class="project-content">
+                        <h3>EdulinkHub App</h3>
+                        <p>EduLink Hub is a centralized educational platform designed to streamline access to university admission links, job opportunities, scholarships, and learning resources — all in one place. Whether you're a student, job seeker, or lifelong learner, EduLink Hub empowers you with the tools and guidance to succeed.
+
+.</p>
+
+                       <a href="https://github.com/Kabir4874/Edulink_Hub_Flutter_App.git" target="_blank" class="project-btn">View Project</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Experience Section -->
+<section class="experience" id="experience">
+  <div class="container">
+    <h2 class="section-title">Professional Experience</h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-date">2025 - Present</div>
+        <div class="timeline-content">
+          <h3>Front-End Developer & Research Assistant</h3>
+          <h4>EduLink Hub Project</h4>
+          <p>Designing and developing user-friendly educational web platforms, conducting research in AI-based educational systems, and integrating resources like university links, scholarships, and e-learning content.</p>
+          <div class="skills-tags">
+            <span class="skill-tag">HTML</span>
+            <span class="skill-tag">CSS</span>
+            <span class="skill-tag">JavaScript</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-date">2025- present</div>
+        <div class="timeline-content">
+          <h3>Researcher (Kidney Stone Detection)</h3>
+          <h4>Academic Research</h4>
+          <p>Conducted systematic reviews on deep learning approaches for kidney stone detection using CT, ultrasound, and endoscopic imaging. Analyzed datasets, preprocessing, segmentation, and model performance.</p>
+          <div class="skills-tags">
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">AI/ML</span>
+            <span class="skill-tag">Medical Imaging</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+           <h2 class="section-title">Collaborate With Me</h2>
+            <p class="contact-subtitle">Have a project in mind or need a creative partner? Let’s build something impactful together — I’m open to freelance, research, and collaborative opportunities.</p>
+
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">📧</div>
+                        <div class="contact-details">
+                            <h4>Email</h4>
+                            <p>sajjadmojumder50@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">📱</div>
+                        <div class="contact-details">
+                            <h4>Phone</h4>
+                            <p>+8801609006758</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">📍</div>
+                        <div class="contact-details">
+                            <h4>Location</h4>
+                            <p>19/1A,Sher-E-Bangla Road,hazaribagh,Dhaka-1205</p>
+                        </div>
+                    </div>
+                </div>
+
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="related-section">
+  <div class="overlay">
+    <div class="related-container">
+      <div class="left-content">
+        <p class="small-heading">YOU MAY ALSO LIKE</p>
+        <h1>Explore More<br>From My Portfolio</h1>
+      </div>
+      <div class="right-content">
+        <ul class="topic-list">
+          <li><a href="https://github.com/Sajjad5640">Web Development Projects</a></li>
+          <li><a href="https://www.researchgate.net/profile/Md-Sajjad-Anik?ev=hdr_xprf">AI & Research Works</a></li>
+          <li><a href="https://drive.google.com/drive/folders/1OUlBb5sL10lgmq3LUCV_esLLqHODgija?usp=sharing">All Certificates</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <!-- Footer -->
+<footer class="footer">
+  <div class="footer-content">
+    <div class="footer-column">
+      <h4>About</h4>
+      <a href="#">My Story</a>
+      <a href="#">Research Interests</a>
+      <a href="#">Portfolio Projects</a>
+    </div>
+
+    <div class="footer-column">
+      <h4>Resources</h4>
+      <a href="#">Blog</a>
+      <a href="#">Publications</a>
+      <a href="#">Terms & Privacy</a>
+    </div>
+
+    <div class="footer-column">
+      <h4>Contact</h4>
+      <a href="#">Get in Touch</a>
+      <a href="#">Location</a>
+      <a href="#">Freelance Opportunities</a>
+    </div>
+  </div>
+
+  <div class="footer-divider"></div>
+
+  <div class="footer-bottom">
+    <div class="footer-logo">
+      <p class="portfolio-name">Md. Sajjad Mojumder Anik</p>
+    </div>
+
+    <div class="footer-socials">
+      <a href="https://www.linkedin.com/in/sajjad-mojumder-391387242/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      <a href="https://www.facebook.com/sajjad.anik.9/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+      <a href="https://www.youtube.com/@your-channel" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+      <a href="https://twitter.com/your-profile" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+      <a href="https://github.com/Sajjad5640" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+    </div>
+  </div>
+
+  <p class="footer-copy">© 2025 Md.Sajjad Mojumder Anik. All rights reserved.</p>
+</footer>
+
+<script>
+  function scrollToSection(id) {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+</script>
+
+<script src="script.js"></script>
+</body>
+</html>
+
