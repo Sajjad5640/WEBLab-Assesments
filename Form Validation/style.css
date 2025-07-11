@@ -1,60 +1,73 @@
 body {
-    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
-    font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  font-family: 'Poppins', sans-serif;
 }
 
-#form {
-    width: 300px;
-    margin: 20vh auto 0 auto;
-    padding: 20px;
-    background-color: whitesmoke;
-    border-radius: 4px;
-    font-size: 12px;
+.container {
+  max-width: 400px;
+  margin: 20vh auto;
 }
 
-#form h1 {
-    color: #0f2027;
-    text-align: center;
+form {
+  padding: 20px;
+  background: #f4f4f4;
+  border-radius: 6px;
+  font-size: 14px;
 }
 
-#form button {
-    padding: 10px;
-    margin-top: 10px;
-    width: 100%;
-    color: white;
-    background-color: rgb(41, 57, 194);
-    border: none;
-    border-radius: 4px;
+form h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #0f2027;
 }
 
 .input-control {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
 }
 
-.input-control input {
-    border: 2px solid #f0f0f0;
-	border-radius: 4px;
-	display: block;
-	font-size: 12px;
-	padding: 10px;
-	width: 90%;
+.input-control input,
+.input-control select {
+  padding: 10px;
+  border: 2px solid #eee;
+  border-radius: 4px;
 }
 
-.input-control input:focus {
-    outline: 0;
+.input-control input:focus,
+.input-control select:focus {
+  outline: none;
+  border-color: #203a43;
 }
 
-.input-control.success input {
-    border-color: #09c372;
+.input-control.success input,
+.input-control.success select {
+  border-color: #09c372;
 }
 
-.input-control.error input {
-    border-color: #ff3860;
+.input-control.error input,
+.input-control.error select {
+  border-color: #ff3860;
 }
 
 .input-control .error {
-    color: #ff3860;
-    font-size: 9px;
-    height: 13px;
+  font-size: 11px;
+  color: #ff3860;
+  height: 13px;
+}
+
+button[type="submit"] {
+  padding: 12px;
+  width: 100%;
+  background: #1e90ff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button[type="submit"]:hover {
+  background: #005fcb;
 }
