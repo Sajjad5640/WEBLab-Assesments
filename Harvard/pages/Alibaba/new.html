@@ -1,0 +1,1546 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up as Supplier - Alibaba.com</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        
+        .supplier-register-container {
+            width: 100vw;
+            
+            display: flex;
+            min-height: 100vh;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        
+        .left-banner {
+            flex: 1;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                        url('https://s.alicdn.com/@img/imgextra/i2/O1CN01DPJ2Zm1OovHYg26mu_!!6000000001753-0-tps-1532-2296.jpg');
+            background-size: cover;
+            background-position: center;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            color: white;
+        }
+        
+        .left-banner .quote {
+            font-size: 24px;
+            margin-bottom: 30px;
+            line-height: 1.4;
+            font-weight: 500;
+        }
+        
+        .left-banner .author {
+            font-weight: bold;
+            margin-bottom: 5px;
+            font-size: 18px;
+        }
+        
+        .left-banner .position {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+        
+        .right-form {
+            flex: 1;
+            padding: 60px;
+            background: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .form-title {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 30px;
+            color: #222;
+        }
+        
+        .country-selector {
+            margin-bottom: 25px;
+        }
+        
+        .country-label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 14px;
+            color: #555;
+            font-weight: 500;
+        }
+        
+        .country-value {
+            display: flex;
+            align-items: center;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            background: #f9f9f9;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .country-value:hover {
+            border-color: #FF6A00;
+        }
+        
+        .country-flag {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+            border-radius: 3px;
+        }
+        
+        .social-login {
+            margin-bottom: 25px;
+        }
+        
+        .social-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px;
+            margin-bottom: 12px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+        
+        .social-btn:hover {
+            border-color: #FF6A00;
+            background: #fff9f5;
+        }
+        
+        .social-icon {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+        }
+        
+        .divider {
+            display: flex;
+            align-items: center;
+            margin: 25px 0;
+            color: #999;
+        }
+        
+        .divider::before, .divider::after {
+            content: "";
+            flex: 1;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .divider-text {
+            padding: 0 15px;
+            font-size: 14px;
+            color: #777;
+        }
+        
+        .email-form {
+            transition: all 0.4s ease;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+            position: relative;
+            opacity: 0;
+            height: 0;
+            overflow: hidden;
+            transition: all 0.4s ease;
+        }
+        
+        .form-group.active {
+            opacity: 1;
+            height: auto;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 14px;
+            color: #555;
+            font-weight: 500;
+        }
+        
+        .form-group input {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+        
+        .form-group input:focus {
+            border-color: #FF6A00;
+            box-shadow: 0 0 0 3px rgba(255,106,0,0.1);
+            outline: none;
+        }
+        
+        .email-input {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 14px;
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+        }
+        
+        .email-input:focus {
+            border-color: #FF6A00;
+            box-shadow: 0 0 0 3px rgba(255,106,0,0.1);
+            outline: none;
+        }
+        
+        .submit-btn {
+            width: 100%;
+            padding: 14px;
+            background-color: #FF6A00;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-weight: bold;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .submit-btn:hover {
+            background-color: #e05d00;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 14px;
+            color: #555;
+            font-weight: 500;
+        }
+        
+        .form-group input {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        
+        .name-fields {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .name-fields .form-group {
+            flex: 1;
+        }
+        
+        .slider-verification {
+            background: #f5f5f5;
+            border-radius: 20px;
+            height: 40px;
+            margin: 20px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .slider-track {
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            background: #FF6A00;
+            width: 0;
+            transition: width 0.3s;
+        }
+        
+        .slider-thumb {
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 40px;
+            width: 40px;
+            background: white;
+            border-radius: 50%;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+            cursor: pointer;
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .slider-text {
+            position: absolute;
+            width: 100%;
+            text-align: center;
+            line-height: 40px;
+            color: #666;
+            z-index: 1;
+        }
+        
+        .checkbox-agreement {
+            margin: 20px 0;
+            font-size: 12px;
+            color: #666;
+            display: flex;
+            align-items: flex-start;
+        }
+        
+        .checkbox-agreement input {
+            margin-right: 10px;
+            margin-top: 3px;
+        }
+        
+        .checkbox-agreement a {
+            color: #FF6A00;
+            text-decoration: none;
+        }
+        
+        .submit-btn {
+            width: 100%;
+            padding: 12px;
+            background-color: #FF6A00;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-weight: bold;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .login-link {
+            text-align: center;
+            font-size: 14px;
+            margin-top: 20px;
+            color: #666;
+        }
+        
+        .login-link a {
+            color: #FF6A00;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.2s ease;
+        }
+        
+        .login-link a:hover {
+            text-decoration: underline;
+        }
+        
+        .error-message {
+            color: #e74c3c;
+            font-size: 12px;
+            margin-top: 5px;
+            display: none;
+        }
+        
+        .input-error {
+            border-color: #e74c3c !important;
+        }
+        
+        @media (max-width: 768px) {
+            .supplier-register-container {
+                flex-direction: column;
+            }
+            
+            .left-banner {
+                padding: 30px 20px;
+            }
+            
+            .right-form {
+                padding: 40px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="supplier-register-container">
+        <div class="left-banner">
+            <div class="quote">
+                "In just 1 year, LTA International generated 14 new customers with new sales growth totaling $1.5 million."
+            </div>
+            <div class="author">Andrea Vitiello</div>
+            <div class="position">LTA Internacional, Fundador</div>
+        </div>
+        
+        <div class="right-form">
+            <h1 class="form-title">Sign up as a supplier</h1>
+            
+            <div class="country-selector">
+                <span class="country-label">Company location:</span>
+                <div class="country-value">
+                    <img src="https://img.icons8.com/?size=100&id=60238&format=png&color=000000" class="country-flag">
+                    <span>Bangladesh</span>
+                    <span style="margin-left: auto;"><i class="fas fa-chevron-down"></i></span>
+                </div>
+            </div>
+            
+            <div class="social-login">
+                <div class="social-btn">
+                    <img src="https://img.icons8.com/color/48/000000/google-logo.png" class="social-icon">
+                    <span>Continue with Google</span>
+                </div>
+                <div class="social-btn">
+                    <img src="https://img.icons8.com/color/48/000000/facebook-new.png" class="social-icon">
+                    <span>Continue with Facebook</span>
+                </div>
+                <div class="social-btn">
+                    <img src="https://img.icons8.com/color/48/000000/linkedin.png" class="social-icon">
+                    <span>Continue with LinkedIn</span>
+                </div>
+            </div>
+            
+            <div class="divider">
+                <span class="divider-text">Or</span>
+            </div>
+            
+            <form id="registrationForm" class="email-form">
+                <input type="email" id="email" class="email-input" placeholder="Email" >
+                <div class="error-message" id="email-error">Please enter a valid email address</div>
+                
+                <div class="form-group">
+                    <input type="password" id="password" placeholder="Password">
+                </div>
+                
+                <div class="name-fields">
+                    <div class="form-group">
+                        <input type="text" id="firstName" placeholder="First name">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="lastName" placeholder="Last name">
+                    </div>
+                </div>
+                
+                <div class="slider-verification">
+                    <div class="slider-track"></div>
+                    <div class="slider-text">Please slide to verify</div>
+                    <div class="slider-thumb">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </div>
+                
+                <div class="checkbox-agreement">
+                    <input type="checkbox" id="agreement">
+                    <label for="agreement">
+                        I agree to the Free Membership Agreement, Terms of Use, and Privacy Policy of Alibaba.com. I agree to receive more information about the platforms products and services.
+                    </label>
+                </div>
+                
+                <button type="submit" class="submit-btn">Create account</button>
+            </form>
+            
+            <div class="login-link">
+                Already have an account? <a href="#">Sign in</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const thumb = document.querySelector('.slider-thumb');
+            const track = document.querySelector('.slider-track');
+            const slider = document.querySelector('.slider-verification');
+            let isDragging = false;
+            let startX = 0;
+            let currentX = 0;
+            
+            thumb.addEventListener('mousedown', (e) => {
+                isDragging = true;
+                startX = e.clientX;
+                thumb.style.transition = 'none';
+                track.style.transition = 'none';
+                e.preventDefault();
+            });
+            
+            document.addEventListener('mousemove', (e) => {
+                if (!isDragging) return;
+                
+                currentX = e.clientX - startX;
+                const sliderWidth = slider.offsetWidth - thumb.offsetWidth;
+                
+                if (currentX < 0) currentX = 0;
+                if (currentX > sliderWidth) currentX = sliderWidth;
+                
+                thumb.style.left = currentX + 'px';
+                track.style.width = currentX + 'px';
+            });
+            
+            document.addEventListener('mouseup', () => {
+                if (!isDragging) return;
+                isDragging = false;
+                
+                const sliderWidth = slider.offsetWidth - thumb.offsetWidth;
+                if (currentX === sliderWidth) {
+                    document.querySelector('.slider-text').textContent = 'Verified';
+                }
+            });
+            
+            // Touch support for mobile
+            thumb.addEventListener('touchstart', (e) => {
+                isDragging = true;
+                startX = e.touches[0].clientX;
+                thumb.style.transition = 'none';
+                track.style.transition = 'none';
+            });
+            
+            document.addEventListener('touchmove', (e) => {
+                if (!isDragging) return;
+                
+                currentX = e.touches[0].clientX - startX;
+                const sliderWidth = slider.offsetWidth - thumb.offsetWidth;
+                
+                if (currentX < 0) currentX = 0;
+                if (currentX > sliderWidth) currentX = sliderWidth;
+                
+                thumb.style.left = currentX + 'px';
+                track.style.width = currentX + 'px';
+            });
+            
+            document.addEventListener('touchend', () => {
+                if (!isDragging) return;
+                isDragging = false;
+                
+                const sliderWidth = slider.offsetWidth - thumb.offsetWidth;
+                if (currentX === sliderWidth) {
+                    document.querySelector('.slider-text').textContent = 'Verified';
+                }
+            });
+            
+            // Form submission
+            document.getElementById('registrationForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                const sliderWidth = slider.offsetWidth - thumb.offsetWidth;
+                
+                if (currentX !== sliderWidth) {
+                    alert('Please complete the verification slider');
+                    return;
+                }
+                
+                if (!document.getElementById('agreement').checked) {
+                    alert('Please agree to the terms and conditions');
+                    return;
+                }
+                
+                alert('Form submitted successfully!');
+                // form.submit(); // Uncomment to actually submit the form
+            });
+        });
+        document.addEventListener('DOMContentLoaded', function() {
+            const emailInput = document.getElementById('email');
+            const formGroups = document.querySelectorAll('.form-group');
+            const form = document.getElementById('registrationForm');
+            
+            // Show additional fields when email is focused
+            emailInput.addEventListener('focus', function() {
+                formGroups.forEach(group => {
+                    group.classList.add('active');
+                });
+            });
+            
+            // Form validation
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                let isValid = true;
+                
+                // Validate email
+                if (!emailInput.value || !/^\S+@\S+\.\S+$/.test(emailInput.value)) {
+                    document.getElementById('email-error').style.display = 'block';
+                    emailInput.classList.add('input-error');
+                    isValid = false;
+                } else {
+                    document.getElementById('email-error').style.display = 'none';
+                    emailInput.classList.remove('input-error');
+                }
+                
+                // Validate first name
+                const firstName = document.getElementById('firstName');
+                if (!firstName.value) {
+                    document.getElementById('firstName-error').style.display = 'block';
+                    firstName.classList.add('input-error');
+                    isValid = false;
+                } else {
+                    document.getElementById('firstName-error').style.display = 'none';
+                    firstName.classList.remove('input-error');
+                }
+                
+                // Validate last name
+                const lastName = document.getElementById('lastName');
+                if (!lastName.value) {
+                    document.getElementById('lastName-error').style.display = 'block';
+                    lastName.classList.add('input-error');
+                    isValid = false;
+                } else {
+                    document.getElementById('lastName-error').style.display = 'none';
+                    lastName.classList.remove('input-error');
+                }
+                
+                // Validate password
+                const password = document.getElementById('password');
+                if (!password.value || password.value.length < 8) {
+                    document.getElementById('password-error').style.display = 'block';
+                    password.classList.add('input-error');
+                    isValid = false;
+                } else {
+                    document.getElementById('password-error').style.display = 'none';
+                    password.classList.remove('input-error');
+                }
+                
+                if (isValid) {
+                    alert('Form submitted successfully!');
+                    // form.submit(); // Uncomment to actually submit the form
+                }
+            });
+            
+            // Hide fields if email is empty and loses focus
+            emailInput.addEventListener('blur', function() {
+                if (!emailInput.value) {
+                    formGroups.forEach(group => {
+                        group.classList.remove('active');
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html> -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up as Supplier - Alibaba.com</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        
+        .supplier-register-container {
+            width: 100vw;
+            
+            display: flex;
+            min-height: 100vh;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        
+        .left-banner {
+            flex: 1;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                        url('https://s.alicdn.com/@img/imgextra/i2/O1CN01DPJ2Zm1OovHYg26mu_!!6000000001753-0-tps-1532-2296.jpg');
+            background-size: cover;
+            background-position: center;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            color: white;
+        }
+        
+        .left-banner .quote {
+            font-size: 24px;
+            margin-bottom: 30px;
+            line-height: 1.4;
+            font-weight: 500;
+        }
+        
+        .left-banner .author {
+            font-weight: bold;
+            margin-bottom: 5px;
+            font-size: 18px;
+        }
+        
+        .left-banner .position {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+        
+        .right-form {
+            flex: 1;
+            padding: 60px;
+            background: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .form-title {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 30px;
+            color: #222;
+        }
+        
+        .country-selector {
+            margin-bottom: 25px;
+        }
+        
+        .country-label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 14px;
+            color: #555;
+            font-weight: 500;
+        }
+        
+        .country-value {
+            display: flex;
+            align-items: center;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            background: #f9f9f9;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .country-value:hover {
+            border-color: #FF6A00;
+        }
+        
+        .country-flag {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+            border-radius: 3px;
+        }
+        
+        .social-login {
+            margin-bottom: 25px;
+        }
+        
+        .social-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px;
+            margin-bottom: 12px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+        
+        .social-btn:hover {
+            border-color: #FF6A00;
+            background: #fff9f5;
+        }
+        
+        .social-icon {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+        }
+        
+        .divider {
+            display: flex;
+            align-items: center;
+            margin: 25px 0;
+            color: #999;
+        }
+        
+        .divider::before, .divider::after {
+            content: "";
+            flex: 1;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .divider-text {
+            padding: 0 15px;
+            font-size: 14px;
+            color: #777;
+        }
+        
+        .email-form {
+            transition: all 0.4s ease;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+            position: relative;
+            opacity: 0;
+            height: 0;
+            overflow: hidden;
+            transition: all 0.4s ease;
+        }
+        
+        .form-group.active {
+            opacity: 1;
+            height: auto;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 14px;
+            color: #555;
+            font-weight: 500;
+        }
+        
+        .form-group input {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+        
+        .form-group input:focus {
+            border-color: #FF6A00;
+            box-shadow: 0 0 0 3px rgba(255,106,0,0.1);
+            outline: none;
+        }
+        
+        .email-input {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 14px;
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+        }
+        
+        .email-input:focus {
+            border-color: #FF6A00;
+            box-shadow: 0 0 0 3px rgba(255,106,0,0.1);
+            outline: none;
+        }
+        
+        .submit-btn {
+            width: 100%;
+            padding: 14px;
+            background-color: #FF6A00;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-weight: bold;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .submit-btn:hover {
+            background-color: #e05d00;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 14px;
+            color: #555;
+            font-weight: 500;
+        }
+        
+        .form-group input {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        
+        .name-fields {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .name-fields .form-group {
+            flex: 1;
+        }
+        
+        .slider-verification {
+            background: #f5f5f5;
+            border-radius: 20px;
+            height: 40px;
+            margin: 20px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .slider-track {
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            background: #FF6A00;
+            width: 0;
+            transition: width 0.3s;
+        }
+        
+        .country-selector {
+            position: relative;
+            width: 100%;
+            font-family: Arial, sans-serif;
+        }
+
+        .country-label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: bold;
+        }
+
+        .country-value {
+            display: flex;
+            align-items: center;
+            padding: 12px 15px;
+            border: 1px solid #aaa;
+            border-radius: 8px;
+            cursor: pointer;
+            background-color: #fff;
+        }
+
+        .country-flag {
+            width: 24px;
+            height: 16px;
+            margin-right: 10px;
+        }
+
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            z-index: 1000;
+            width: 100%;
+            max-height: 300px;
+            overflow-y: auto;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            background-color: #fff;
+            display: none;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            margin-top: 5px;
+        }
+
+        .dropdown-item {
+            display: flex;
+            align-items: center;
+            padding: 10px 15px;
+            cursor: pointer;
+            gap: 10px;
+            transition: all 0.2s;
+        }
+
+        .dropdown-item:hover {
+            background-color: #f5f5f5;
+        }
+
+        .dropdown-item input {
+            margin-right: 8px;
+        }
+
+        .dropdown-search {
+            padding: 10px 15px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .dropdown-search input {
+            width: 100%;
+            padding: 8px 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+                    
+        .slider-thumb {
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 40px;
+            width: 40px;
+            background: white;
+            border-radius: 50%;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+            cursor: pointer;
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .slider-text {
+            position: absolute;
+            width: 100%;
+            text-align: center;
+            line-height: 40px;
+            color: #666;
+            z-index: 1;
+        }
+        
+        .checkbox-agreement {
+            margin: 20px 0;
+            font-size: 12px;
+            color: #666;
+            display: flex;
+            align-items: flex-start;
+        }
+        
+        .checkbox-agreement input {
+            margin-right: 10px;
+            margin-top: 3px;
+        }
+        
+        .checkbox-agreement a {
+            color: #FF6A00;
+            text-decoration: none;
+        }
+        
+        .submit-btn {
+            width: 100%;
+            padding: 12px;
+            background-color: #FF6A00;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-weight: bold;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .login-link {
+            text-align: center;
+            font-size: 14px;
+            margin-top: 20px;
+            color: #666;
+        }
+        
+        .login-link a {
+            color: #FF6A00;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.2s ease;
+        }
+        
+        .login-link a:hover {
+            text-decoration: underline;
+        }
+        
+        .error-message {
+            color: #e74c3c;
+            font-size: 12px;
+            margin-top: 5px;
+            display: none;
+        }
+        
+        .input-error {
+            border-color: #e74c3c !important;
+        }
+        
+        /* Password requirements styling */
+        .password-requirements {
+            margin-top: 5px;
+            padding: 10px;
+            background: #f9f9f9;
+            border-radius: 6px;
+            font-size: 12px;
+            display: none;
+        }
+        
+        .password-requirements ul {
+            list-style: none;
+            padding-left: 5px;
+        }
+        
+        .password-requirements li {
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .password-requirements li i {
+            margin-right: 5px;
+            font-size: 10px;
+        }
+        
+        .requirement-met {
+            color: #27ae60;
+        }
+        
+        .requirement-not-met {
+            color: #e74c3c;
+        }
+        
+        @media (max-width: 768px) {
+            .supplier-register-container {
+                flex-direction: column;
+            }
+            
+            .left-banner {
+                padding: 30px 20px;
+            }
+            
+            .right-form {
+                padding: 40px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="supplier-register-container">
+        <div class="left-banner">
+            <div class="quote">
+                "In just 1 year, LTA International generated 14 new customers with new sales growth totaling $1.5 million."
+            </div>
+            <div class="author">Andrea Vitiello</div>
+            <div class="position">LTA Internacional, Fundador</div>
+        </div>
+        
+        <div class="right-form">
+            <h1 class="form-title">Sign up as a supplier</h1>
+            
+            <div class="country-selector">
+                <span class="country-label">Company location:</span>
+                <div class="country-value" onclick="toggleDropdown()">
+                    <img src="https://img.icons8.com/?size=100&id=60238&format=png&color=000000" class="country-flag" id="selected-flag">
+                    <span id="selected-country">Bangladesh</span>
+                    <span style="margin-left: auto;"><i class="fas fa-chevron-down"></i></span>
+                </div>
+
+                <div class="dropdown-menu" id="country-dropdown">
+                    <div class="dropdown-search">
+                        <input type="text" placeholder="Search countries..." id="country-search">
+                    </div>
+                    <label class="dropdown-item">
+                        <input type="radio" name="country" value="Bangladesh" checked onclick="selectCountry('Bangladesh', 'https://img.icons8.com/?size=100&id=60238&format=png&color=000000')">
+                        <img src="https://img.icons8.com/?size=100&id=60238&format=png&color=000000" class="country-flag"> Bangladesh
+                    </label>
+                    <label class="dropdown-item">
+                        <input type="radio" name="country" value="India" onclick="selectCountry('India', 'https://img.icons8.com/?size=100&id=60229&format=png')">
+                        <img src="https://img.icons8.com/?size=100&id=60229&format=png" class="country-flag"> India
+                    </label>
+                    <label class="dropdown-item">
+                        <input type="radio" name="country" value="USA" onclick="selectCountry('USA', 'https://img.icons8.com/?size=100&id=60257&format=png')">
+                        <img src="https://img.icons8.com/?size=100&id=60257&format=png" class="country-flag"> USA
+                    </label>
+                    <label class="dropdown-item">
+                        <input type="radio" name="country" value="China" onclick="selectCountry('China', 'https://img.icons8.com/?size=100&id=60236&format=png')">
+                        <img src="https://img.icons8.com/?size=100&id=60236&format=png" class="country-flag"> China
+                    </label>
+                    <label class="dropdown-item">
+                        <input type="radio" name="country" value="Japan" onclick="selectCountry('Japan', 'https://img.icons8.com/?size=100&id=60240&format=png')">
+                        <img src="https://img.icons8.com/?size=100&id=60240&format=png" class="country-flag"> Japan
+                    </label>
+                    <label class="dropdown-item">
+                        <input type="radio" name="country" value="Germany" onclick="selectCountry('Germany', 'https://img.icons8.com/?size=100&id=60237&format=png')">
+                        <img src="https://img.icons8.com/?size=100&id=60237&format=png" class="country-flag"> Germany
+                    </label>
+                    <label class="dropdown-item">
+                        <input type="radio" name="country" value="UK" onclick="selectCountry('UK', 'https://img.icons8.com/?size=100&id=60256&format=png')">
+                        <img src="https://img.icons8.com/?size=100&id=60256&format=png" class="country-flag"> United Kingdom
+                    </label>
+                    <label class="dropdown-item">
+                        <input type="radio" name="country" value="France" onclick="selectCountry('France', 'https://img.icons8.com/?size=100&id=60239&format=png')">
+                        <img src="https://img.icons8.com/?size=100&id=60239&format=png" class="country-flag"> France
+                    </label>
+                    <label class="dropdown-item">
+                        <input type="radio" name="country" value="Brazil" onclick="selectCountry('Brazil', 'https://img.icons8.com/?size=100&id=60235&format=png')">
+                        <img src="https://img.icons8.com/?size=100&id=60235&format=png" class="country-flag"> Brazil
+                    </label>
+                    <label class="dropdown-item">
+                        <input type="radio" name="country" value="Canada" onclick="selectCountry('Canada', 'https://img.icons8.com/?size=100&id=60258&format=png')">
+                        <img src="https://img.icons8.com/?size=100&id=60258&format=png" class="country-flag"> Canada
+                    </label>
+                </div>
+            </div>
+            
+            <div class="social-login">
+                <div class="social-btn">
+                    <img src="https://img.icons8.com/color/48/000000/google-logo.png" class="social-icon">
+                    <span>Continue with Google</span>
+                </div>
+                <div class="social-btn">
+                    <img src="https://img.icons8.com/color/48/000000/facebook-new.png" class="social-icon">
+                    <span>Continue with Facebook</span>
+                </div>
+                <div class="social-btn">
+                    <img src="https://img.icons8.com/color/48/000000/linkedin.png" class="social-icon">
+                    <span>Continue with LinkedIn</span>
+                </div>
+            </div>
+            
+            <div class="divider">
+                <span class="divider-text">Or</span>
+            </div>
+            
+            <form id="registrationForm" class="email-form">
+                <input type="email" id="email" class="email-input" placeholder="Email" >
+                <div class="error-message" id="email-error">Please enter a valid email address</div>
+                
+                <div class="form-group">
+                    <input type="password" id="password" placeholder="Password">
+                    <div class="password-requirements" id="password-requirements">
+                        <ul>
+                            <li id="req-length"><i class="fas"></i> Contains 6 to 20 characters</li>
+                            <li id="req-chars"><i class="fas"></i> Contains letters, numbers or symbols only</li>
+                            <li id="req-combo"><i class="fas"></i> Contains at least two of the following: letters, numbers or symbols</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="name-fields">
+                    <div class="form-group">
+                        <input type="text" id="firstName" placeholder="First name">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="lastName" placeholder="Last name">
+                    </div>
+                </div>
+                
+                <div class="slider-verification">
+                    <div class="slider-track"></div>
+                    <div class="slider-text">Please slide to verify</div>
+                    <div class="slider-thumb">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </div>
+                
+                <div class="checkbox-agreement">
+                    <input type="checkbox" id="agreement">
+                    <label for="agreement">
+                        I agree to the Free Membership Agreement, Terms of Use, and Privacy Policy of Alibaba.com. I agree to receive more information about the platforms products and services.
+                    </label>
+                </div>
+                
+                <button type="submit" class="submit-btn">Create account</button>
+            </form>
+            
+            <div class="login-link">
+                Already have an account? <a href="#">Sign in</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Country dropdown functionality
+        function toggleDropdown() {
+            const dropdown = document.getElementById('country-dropdown');
+            if (dropdown.style.display === 'block') {
+                dropdown.style.display = 'none';
+            } else {
+                dropdown.style.display = 'block';
+            }
+        }
+        
+        function selectCountry(country, flagUrl) {
+            document.getElementById('selected-country').textContent = country;
+            document.getElementById('selected-flag').src = flagUrl;
+            document.getElementById('country-dropdown').style.display = 'none';
+        }
+        
+        // Close dropdown when clicking outside
+        document.addEventListener('click', function(event) {
+            const dropdown = document.getElementById('country-dropdown');
+            const countryValue = document.querySelector('.country-value');
+            if (!countryValue.contains(event.target) && !dropdown.contains(event.target)) {
+                dropdown.style.display = 'none';
+            }
+        });
+        
+        // Country search functionality
+        document.getElementById('country-search').addEventListener('input', function(e) {
+            const searchTerm = e.target.value.toLowerCase();
+            const items = document.querySelectorAll('.dropdown-item');
+            
+            items.forEach(item => {
+                const text = item.textContent.toLowerCase();
+                if (text.includes(searchTerm)) {
+                    item.style.display = 'flex';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const thumb = document.querySelector('.slider-thumb');
+            const track = document.querySelector('.slider-track');
+            const slider = document.querySelector('.slider-verification');
+            let isDragging = false;
+            let startX = 0;
+            let currentX = 0;
+            
+            thumb.addEventListener('mousedown', (e) => {
+                isDragging = true;
+                startX = e.clientX;
+                thumb.style.transition = 'none';
+                track.style.transition = 'none';
+                e.preventDefault();
+            });
+            
+            document.addEventListener('mousemove', (e) => {
+                if (!isDragging) return;
+                
+                currentX = e.clientX - startX;
+                const sliderWidth = slider.offsetWidth - thumb.offsetWidth;
+                
+                if (currentX < 0) currentX = 0;
+                if (currentX > sliderWidth) currentX = sliderWidth;
+                
+                thumb.style.left = currentX + 'px';
+                track.style.width = currentX + 'px';
+            });
+            
+            document.addEventListener('mouseup', () => {
+                if (!isDragging) return;
+                isDragging = false;
+                
+                const sliderWidth = slider.offsetWidth - thumb.offsetWidth;
+                if (currentX === sliderWidth) {
+                    document.querySelector('.slider-text').textContent = 'Verified';
+                }
+            });
+            
+            // Touch support for mobile
+            thumb.addEventListener('touchstart', (e) => {
+                isDragging = true;
+                startX = e.touches[0].clientX;
+                thumb.style.transition = 'none';
+                track.style.transition = 'none';
+            });
+            
+            document.addEventListener('touchmove', (e) => {
+                if (!isDragging) return;
+                
+                currentX = e.touches[0].clientX - startX;
+                const sliderWidth = slider.offsetWidth - thumb.offsetWidth;
+                
+                if (currentX < 0) currentX = 0;
+                if (currentX > sliderWidth) currentX = sliderWidth;
+                
+                thumb.style.left = currentX + 'px';
+                track.style.width = currentX + 'px';
+            });
+            
+            document.addEventListener('touchend', () => {
+                if (!isDragging) return;
+                isDragging = false;
+                
+                const sliderWidth = slider.offsetWidth - thumb.offsetWidth;
+                if (currentX === sliderWidth) {
+                    document.querySelector('.slider-text').textContent = 'Verified';
+                }
+            });
+            
+            // Form submission
+            document.getElementById('registrationForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                const sliderWidth = slider.offsetWidth - thumb.offsetWidth;
+                
+                if (currentX !== sliderWidth) {
+                    alert('Please complete the verification slider');
+                    return;
+                }
+                
+                if (!document.getElementById('agreement').checked) {
+                    alert('Please agree to the terms and conditions');
+                    return;
+                }
+                
+                alert('Form submitted successfully!');
+                // form.submit(); // Uncomment to actually submit the form
+            });
+            
+            const emailInput = document.getElementById('email');
+            const formGroups = document.querySelectorAll('.form-group');
+            const form = document.getElementById('registrationForm');
+            
+            // Show additional fields when email is focused
+            emailInput.addEventListener('focus', function() {
+                formGroups.forEach(group => {
+                    group.classList.add('active');
+                });
+            });
+            
+            // Password requirements functionality
+            const passwordInput = document.getElementById('password');
+            const passwordRequirements = document.getElementById('password-requirements');
+            
+            passwordInput.addEventListener('focus', function() {
+                passwordRequirements.style.display = 'block';
+            });
+            
+            passwordInput.addEventListener('blur', function() {
+                // Keep showing if there's content but requirements aren't met
+                if (passwordInput.value && !checkPasswordRequirements(passwordInput.value)) {
+                    passwordRequirements.style.display = 'block';
+                } else {
+                    passwordRequirements.style.display = 'none';
+                }
+            });
+            
+            passwordInput.addEventListener('input', function() {
+                checkPasswordRequirements(passwordInput.value);
+            });
+            
+            function checkPasswordRequirements(password) {
+                // Check length requirement (6-20 characters)
+                const lengthValid = password.length >= 6 && password.length <= 20;
+                updateRequirement('req-length', lengthValid);
+                
+                // Check valid characters (letters, numbers, symbols)
+                const charsValid = /^[a-zA-Z0-9!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]*$/.test(password);
+                updateRequirement('req-chars', charsValid);
+                
+                // Check combination requirement (at least 2 of: letters, numbers, symbols)
+                const hasLetter = /[a-zA-Z]/.test(password);
+                const hasNumber = /[0-9]/.test(password);
+                const hasSymbol = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/.test(password);
+                
+                let comboCount = 0;
+                if (hasLetter) comboCount++;
+                if (hasNumber) comboCount++;
+                if (hasSymbol) comboCount++;
+                
+                const comboValid = comboCount >= 2;
+                updateRequirement('req-combo', comboValid);
+                
+                return lengthValid && charsValid && comboValid;
+            }
+            
+            function updateRequirement(elementId, isValid) {
+                const element = document.getElementById(elementId);
+                const icon = element.querySelector('i');
+                
+                if (isValid) {
+                    icon.className = 'fas fa-check-circle requirement-met';
+                    element.classList.add('requirement-met');
+                    element.classList.remove('requirement-not-met');
+                } else {
+                    icon.className = 'fas fa-times-circle requirement-not-met';
+                    element.classList.add('requirement-not-met');
+                    element.classList.remove('requirement-met');
+                }
+            }
+            
+            // Form validation
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                let isValid = true;
+                
+                // Validate email
+                if (!emailInput.value || !/^\S+@\S+\.\S+$/.test(emailInput.value)) {
+                    document.getElementById('email-error').style.display = 'block';
+                    emailInput.classList.add('input-error');
+                    isValid = false;
+                } else {
+                    document.getElementById('email-error').style.display = 'none';
+                    emailInput.classList.remove('input-error');
+                }
+                
+                // Validate first name
+                const firstName = document.getElementById('firstName');
+                if (!firstName.value) {
+                    // Create error message if it doesn't exist
+                    if (!document.getElementById('firstName-error')) {
+                        const error = document.createElement('div');
+                        error.className = 'error-message';
+                        error.id = 'firstName-error';
+                        error.textContent = 'Please enter your first name';
+                        firstName.parentNode.appendChild(error);
+                    }
+                    document.getElementById('firstName-error').style.display = 'block';
+                    firstName.classList.add('input-error');
+                    isValid = false;
+                } else {
+                    if (document.getElementById('firstName-error')) {
+                        document.getElementById('firstName-error').style.display = 'none';
+                    }
+                    firstName.classList.remove('input-error');
+                }
+                
+                // Validate last name
+                const lastName = document.getElementById('lastName');
+                if (!lastName.value) {
+                    // Create error message if it doesn't exist
+                    if (!document.getElementById('lastName-error')) {
+                        const error = document.createElement('div');
+                        error.className = 'error-message';
+                        error.id = 'lastName-error';
+                        error.textContent = 'Please enter your last name';
+                        lastName.parentNode.appendChild(error);
+                    }
+                    document.getElementById('lastName-error').style.display = 'block';
+                    lastName.classList.add('input-error');
+                    isValid = false;
+                } else {
+                    if (document.getElementById('lastName-error')) {
+                        document.getElementById('lastName-error').style.display = 'none';
+                    }
+                    lastName.classList.remove('input-error');
+                }
+                
+                // Validate password
+                const password = document.getElementById('password');
+                if (!password.value || !checkPasswordRequirements(password.value)) {
+                    // Create error message if it doesn't exist
+                    if (!document.getElementById('password-error')) {
+                        const error = document.createElement('div');
+                        error.className = 'error-message';
+                        error.id = 'password-error';
+                        error.textContent = 'Please meet all password requirements';
+                        password.parentNode.appendChild(error);
+                    }
+                    document.getElementById('password-error').style.display = 'block';
+                    password.classList.add('input-error');
+                    passwordRequirements.style.display = 'block';
+                    isValid = false;
+                } else {
+                    if (document.getElementById('password-error')) {
+                        document.getElementById('password-error').style.display = 'none';
+                    }
+                    password.classList.remove('input-error');
+                }
+                
+                if (isValid) {
+                    alert('Form submitted successfully!');
+                    // form.submit(); // Uncomment to actually submit the form
+                }
+            });
+            
+            // Hide fields if email is empty and loses focus
+            emailInput.addEventListener('blur', function() {
+                if (!emailInput.value) {
+                    formGroups.forEach(group => {
+                        group.classList.remove('active');
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="images/favicon.png" />
+    <title>Harvard University</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+<body>
+    <header>
+  <div class="top-bar">
+    <div class="container top-bar-container">
+      <div class="logo">
+        <img src="images/mylogo.png" alt="Logo">
+      </div>
+      <div class="nav">
+        <div class="search-box">
+          <i class="fas fa-search"></i>
+
+          <a href="#">Search</a>
+        </div>
+        
+        <div class="menu-box" id="menuBox">
+          <i class="fas fa-bars"></i>
+          <a href="#">Menu</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- Fullscreen Portfolio Overlay -->
+<div class="menu-overlay" id="menuOverlay">
+  <span class="close-btn" id="closeBtn"><i class="fas fa-times"></i></span>
+
+  <div class="menu-content">
+    <!-- Left Vertical Nav -->
+    <div class="menu-nav">
+      <a href="#" data-section="about" class="menu-link active">About Me</a>
+      <a href="#" data-section="skills" class="menu-link">Skills</a>
+      <a href="#" data-section="projects" class="menu-link">Projects</a>
+      <a href="#" data-section="experience" class="menu-link">Experience</a>
+      <a href="#" data-section="education" class="menu-link">Education</a>
+      <a href="#" data-section="contact" class="menu-link">Contact</a>
+    </div>
+
+    <!-- Right Dynamic Content -->
+    <div class="menu-main">
+      <!-- About Me -->
+      <div id="about" class="menu-section active">
+        <h1>About Me</h1>
+        <p>Hi, I'm Md. Sajjad Mojumder Anik, a passionate frontend developer with expertise in React.js, Flutter, and modern UI/UX design. I love building scalable, responsive, and user-friendly web/mobile applications.</p>
+      </div>
+
+      <!-- Skills -->
+      <div id="skills" class="menu-section">
+        <h1>Skills</h1>
+        <ul>
+          <li>🌐 HTML, CSS, JavaScript</li>
+          <li>⚛️ React.js, Redux</li>
+          <li>📱 Flutter, Dart</li>
+          <li>🎨 UI/UX Design (Figma)</li>
+          <li>⚙️ REST APIs, Git, Firebase</li>
+        </ul>
+      </div>
+
+      <!-- Projects -->
+      <div id="projects" class="menu-section">
+        <a href="pages/projects.html" style="text-decoration: none; color: inherit;">
+  <h1>Projects</h1>
+</a>
+        <div class="menu-links">
+          <a href="#">EduLink Hub – University Admission App (Flutter)</a>
+          <a href="#">Eco-Fashion E-commerce Site (React)</a>
+          <a href="#">Kidney Stone Detection with Deep Learning (Research)</a>
+        </div>
+      </div>
+
+      <!-- Experience -->
+      <div id="experience" class="menu-section">
+        <h1>Experience</h1>
+        <p>5+ years in software development with a focus on front-end technologies, building scalable systems and improving user experiences.</p>
+      </div>
+
+      <!-- Education -->
+      <div id="education" class="menu-section">
+        <h1>Education</h1>
+        <p>B.Sc in Computer Science and Engineering<br/>Daffodil International University</p>
+      </div>
+
+      <!-- Contact -->
+      <div id="contact" class="menu-section">
+        <h1>Contact</h1>
+        <p>Email: your.email@example.com</p>
+        <p>GitHub: <a href="https://github.com/yourusername" target="_blank">yourusername</a></p>
+        <p>LinkedIn: <a href="https://linkedin.com/in/yourprofile" target="_blank">linkedin.com/in/yourprofile</a></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom Quick Links -->
+  <div class="quick-links">
+    <a href="#">Resume (PDF)</a>
+    <a href="#">GitHub</a>
+    <a href="#">LinkedIn</a>
+    <a href="#">Portfolio Website</a>
+    <a href="#">Contact Me</a>
+  </div>
+</div>
+
+</header>
+
+    
+    <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+        <h1 class="hero-title">Md. Sajjad Mojumder Anik</h1>
+        <p class="hero-subtitle">
+            Passionate Frontend Developer and dedicated Bioinformatics Researcher committed to crafting seamless user experiences and advancing scientific discovery. Loyal and focused, I bring integrity and excellence to every project I undertake.
+        </p>
+        <a href="#" class="hero-button">Explore My Work</a>
+    </div>
+</section>
+
+    
+    <section class="section container">
+        <h2 class="section-title">From our campus to your life</h2>
+        
+        <div class="card-grid">
+            <div class="card">
+                <div class="card-image" style="background-image: url('https://www.harvard.edu/wp-content/uploads/2025/04/050725_Discoveries_048.jpeg')"></div>
+                <div class="card-content">
+                    <h3 class="card-title">Injectable treatments for diabetes and obesity</h3>
+                    <p>More than three decades ago, Joel Habener set up an experiment that led to the discovery of GLP-1, a hormone utilized for drugs like Ozempic and Wegovy.</p>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-image" style="background-image: url('https://www.harvard.edu/wp-content/uploads/2025/01/100219_Sesame_Street2_0522.jpg')"></div>
+                <div class="card-content">
+                    <h3 class="card-title">"Sesame Street"</h3>
+                    <p>Harvard Graduate School of Education's Gerald Lesser was instrumental in the development of "Sesame Street."</p>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-image" style="background-image: url('https://www.harvard.edu/wp-content/uploads/2025/02/Defibrillator.jpeg')"></div>
+                <div class="card-content">
+                    <h3 class="card-title">Defibrillator</h3>
+                    <p>Paul Zoll helped to develop the defibrillator, which provided a new approach for resuscitating patients, saving countless lives.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="container">
+        <div class="media-text">
+            <div class="media-text-media">
+                <img src="https://www.harvard.edu/wp-content/uploads/2025/06/1200-3-john-kovac.png" alt="John M. Kovac" style="width: 100%; height: auto;">
+            </div>
+            <div class="media-text-content">
+                <h2>How Harvard supports cutting-edge research</h2>
+                <p>The Star-Friedman Challenge provides seed funding to support promising research that might not be funded by traditional sources, encouraging investigators to explore new directions branching off their previous work.</p>
+                <a href="#" class="hero-button">Learn more about the grants</a>
+            </div>
+        </div>
+    </section>
+    
+    <section class="section container">
+        <h2 class="section-title">Medical innovations</h2>
+        <p>Since founding Harvard Medical School in 1782, Harvard has been pushing innovations in health and medicine into the future.</p>
+        
+        <div class="card-grid">
+            <div class="card">
+                <div class="card-image" style="background-image: url('https://www.harvard.edu/wp-content/uploads/2025/01/Kidney-Transplant.jpg')"></div>
+                <div class="card-content">
+                    <h3 class="card-title">The first organ transplant</h3>
+                    <p>On December 23, 1954, Harvard Medical School Professor Joseph Murray and his team performed the first organ transplant.</p>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-image" style="background-image: url('https://www.harvard.edu/wp-content/uploads/2025/03/TB.jpg')"></div>
+                <div class="card-content">
+                    <h3 class="card-title">Novel tuberculosis regimens</h3>
+                    <p>An international clinical trial including Harvard Medical School found three new safe and effective drug regimens for tuberculosis.</p>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-image" style="background-image: url('https://www.harvard.edu/wp-content/uploads/2025/06/043025_DougMelton_025.jpeg')"></div>
+                <div class="card-content">
+                    <h3 class="card-title">Type 1 diabetes treatment</h3>
+                    <p>Doug Melton and his colleagues are within sight of a new treatment for Type 1 diabetes that uses stem cells.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-column">
+                    <h3>Security & Brand</h3>
+                    <ul class="footer-links">
+                        <li class="footer-link"><a href="#">Report Copyright Infringement</a></li>
+                        <li class="footer-link"><a href="#">Report Security Issue</a></li>
+                        <li class="footer-link"><a href="#">Trademark Notice</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Website</h3>
+                    <ul class="footer-links">
+                        <li class="footer-link"><a href="#">Accessibility</a></li>
+                        <li class="footer-link"><a href="#">Digital Accessibility</a></li>
+                        <li class="footer-link"><a href="#">Privacy statement</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Get In Touch</h3>
+                    <ul class="footer-links">
+                        <li class="footer-link"><a href="#">Contact Harvard</a></li>
+                        <li class="footer-link"><a href="#">Maps & Directions</a></li>
+                        <li class="footer-link"><a href="#">Jobs</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>Copyright © 2025 The President and Fellows of Harvard College</p>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

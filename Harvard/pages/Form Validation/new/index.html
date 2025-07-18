@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+  <head>
+
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+
+      rel="stylesheet"
+
+    />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Home</title>
+
+  </head>
+
+  <body>
+
+    <nav>
+
+      <div class="heading">
+
+        <h4>Navigation Bar</h4>
+
+      </div>
+
+      <ul class="nav-links">
+
+        <li><a class="active" href="index.html">Home</a></li>
+
+        <li><a href="pages/about.html">About</a></li>
+
+        <li><a href="pages/services.html">Services</a></li>
+
+        <li><a href="pages/contact.html">Contact</a></li>
+
+      </ul>
+
+    </nav>
+
+   
+    <div class="carousel-container">
+      <div class="images fade">
+         <img src="https://cdn.pixabay.com/photo/2015/04/19/08/32/marguerite-729510__480.jpg">
+         </div>
+         <div class="images fade">
+            <img src="https://cdn.pixabay.com/photo/2014/02/27/16/10/tree-276014_960_720.jpg">
+         </div>
+         <div class="images fade">
+            <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_960_720.jpg">
+         </div>
+         
+         <!-- Previous and Next Buttons -->
+         <a class="previous" onclick="plusSlides(-1)">❮</a>
+         <a class="next" onclick="plusSlides(1)">❯</a>
+   </div>
+   <br>
+   
+   <!-- Navigation Dots-->
+   <div style="text-align:center">
+      <span class="navigation-dot" onclick="currentSlide(1)"></span>
+      <span class="navigation-dot" onclick="currentSlide(2)"></span>
+      <span class="navigation-dot" onclick="currentSlide(3)"></span>
+   </div>
+<script src="script.js"></script>
+  </body>
+
+</html>
