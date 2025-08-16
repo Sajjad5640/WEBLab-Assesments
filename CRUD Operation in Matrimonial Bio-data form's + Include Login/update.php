@@ -6,7 +6,7 @@ include('server.php');
 if (!isset($_GET['id'])) {
     $_SESSION['message'] = "No biodata ID specified for update.";
     $_SESSION['message_type'] = "error";
-    header("Location: index.php");
+    header("Location: read.php");
     exit();
 }
 
@@ -22,7 +22,7 @@ $result = $stmt->get_result();
 if ($result->num_rows == 0) {
     $_SESSION['message'] = "No biodata found with that ID.";
     $_SESSION['message_type'] = "error";
-    header("Location: index.php");
+    header("Location: read.php");
     exit();
 }
 
@@ -58,7 +58,7 @@ $stmt->close();
       </div>
     <?php endif; ?>
     
-    <form id="biodata-form" action="server.php" method="post">
+    <form id="biodata-form" action="update_logic.php" method="post">
       <input type="hidden" name="id" value="<?php echo $id; ?>">
       <input type="hidden" name="action" value="update">
       
