@@ -58,7 +58,7 @@ $stmt->close();
       </div>
     <?php endif; ?>
     
-    <form id="biodata-form" action="update_logic.php" method="post">
+    <form id="biodata-form" action="update_logic.php" method="post" enctype="multipart/form-data">
       <input type="hidden" name="id" value="<?php echo $id; ?>">
       <input type="hidden" name="action" value="update">
       
@@ -298,6 +298,32 @@ $stmt->close();
         <textarea id="address" name="address" rows="3" placeholder="Your full address" required><?php echo htmlspecialchars($biodata['address']); ?></textarea>
         <div class="error"></div>
       </div>
+      <!-- Add these fields before the form-actions div -->
+
+<div class="input-control">
+  <label for="profileImage">Update Profile Image (JPEG/PNG)</label>
+  <?php if (!empty($biodata['profile_image'])): ?>
+    <div class="current-file">
+      <img src="<?php echo htmlspecialchars($biodata['profile_image']); ?>" class="current-profile-img" alt="Current Profile">
+      <span>Current: <?php echo basename($biodata['profile_image']); ?></span>
+    </div>
+  <?php endif; ?>
+  <input type="file" id="profileImage" name="profileImage" accept="image/jpeg, image/png">
+  <div class="error"></div>
+</div>
+
+<div class="input-control">
+  <label for="biodataPdf">Update Biodata PDF</label>
+  <?php if (!empty($biodata['biodata_pdf'])): ?>
+    <div class="current-file">
+      <a href="<?php echo htmlspecialchars($biodata['biodata_pdf']); ?>" target="_blank" class="pdf-link">
+        <i class="fas fa-file-pdf"></i> Current PDF: <?php echo basename($biodata['biodata_pdf']); ?>
+      </a>
+    </div>
+  <?php endif; ?>
+  <input type="file" id="biodataPdf" name="biodataPdf" accept=".pdf">
+  <div class="error"></div>
+</div>
 
       <div class="form-actions">
   <button type="submit" name="update" class="btn btn-primary">

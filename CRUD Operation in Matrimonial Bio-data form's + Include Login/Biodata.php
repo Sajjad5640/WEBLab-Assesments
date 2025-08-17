@@ -22,7 +22,7 @@
         ?>
       </div>
     <?php endif; ?>
-    <form id="biodata-form" action="model.php" method="post">
+    <form id="biodata-form" action="model.php" method="post" enctype="multipart/form-data">
       <div class="form-header">
         <h1>Matrimonial Biodata</h1>
         <p>Find your perfect life partner</p>
@@ -228,6 +228,19 @@
         <textarea id="address" name="address" rows="3" placeholder="Your full address" required></textarea>
         <div class="error"></div>
       </div>
+      <!-- Add after the address field and before the submit button -->
+
+<div class="input-control">
+  <label for="profileImage">Profile Image (JPEG/PNG)</label>
+  <input type="file" id="profileImage" name="profileImage" accept="image/jpeg, image/png" />
+  <div class="error"></div>
+</div>
+
+<div class="input-control">
+  <label for="biodataPdf">Upload Biodata PDF (Optional)</label>
+  <input type="file" id="biodataPdf" name="biodataPdf" accept=".pdf" />
+  <div class="error"></div>
+</div>
 
       <button type="submit" name="submit" class="btn btn-primary">
         <i class="fas fa-file-pdf"></i> Generate Biodata 

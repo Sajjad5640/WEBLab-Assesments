@@ -16,11 +16,12 @@ include("server.php"); // Database connection
     h2 {
       text-align: center;
       color: #333;
+      margin-bottom: 20px;
     }
     .top-bar {
       display: flex;
       justify-content: flex-start;
-      margin-bottom: 15px;
+      margin-bottom: 20px;
     }
     .add-btn {
       background-color: #4CAF50;
@@ -29,39 +30,85 @@ include("server.php"); // Database connection
       text-decoration: none;
       border-radius: 4px;
       font-size: 14px;
+      transition: background-color 0.3s;
+    }
+    .add-btn:hover {
+      background-color: #45a049;
     }
     table {
       width: 100%;
       border-collapse: collapse;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
       background-color: #fff;
+      margin-top: 20px;
     }
     th, td {
-      padding: 10px 15px;
+      padding: 12px 15px;
       border: 1px solid #ddd;
       text-align: left;
       font-size: 14px;
     }
     th {
-      background-color: #fff;
-      color: black;
+      background-color: #f2f2f2;
+      color: #333;
+      font-weight: bold;
     }
     tr:nth-child(even) {
-      background-color: #f2f2f2;
+      background-color: #f9f9f9;
+    }
+    tr:hover {
+      background-color: #f1f1f1;
     }
     .no-data {
       text-align: center;
       color: #888;
-      padding: 20px;
+      padding: 30px;
       font-size: 16px;
+      background-color: #fff;
+      border-radius: 4px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
     .action-links a {
       margin-right: 10px;
       color: #007BFF;
       text-decoration: none;
+      transition: color 0.3s;
     }
     .action-links a:hover {
+      color: #0056b3;
       text-decoration: underline;
+    }
+    .profile-img {
+      width: 60px;
+      height: 60px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 2px solid #ddd;
+      display: block;
+      margin: 0 auto;
+    }
+    .pdf-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: #d32f2f;
+      text-decoration: none;
+      font-weight: 500;
+      padding: 5px 10px;
+      border-radius: 4px;
+      transition: all 0.3s;
+    }
+    .pdf-link:hover {
+      background-color: #f5f5f5;
+      text-decoration: underline;
+    }
+    .pdf-icon {
+      width: 24px;
+      height: 24px;
+    }
+    .file-missing {
+      color: #888;
+      font-style: italic;
     }
   </style>
 </head>
@@ -82,6 +129,7 @@ if ($result && $result->num_rows > 0) {
     echo "<thead>
             <tr>
               <th>ID</th>
+              <th>Profile Image</th>
               <th>Full Name</th>
               <th>Email</th>
               <th>DOB</th>
@@ -99,6 +147,7 @@ if ($result && $result->num_rows > 0) {
               <th>Nationality</th>
               <th>Phone</th>
               <th>Address</th>
+              <th>Biodata PDF</th>
               <th>Actions</th>
             </tr>
           </thead>";
@@ -106,6 +155,21 @@ if ($result && $result->num_rows > 0) {
     while ($row = $result->fetch_assoc()) {
         echo "<tr>";
         echo "<td>{$row["id"]}</td>";
+        // Display profile image
+        echo '<td style="text-align: center;">';
+        if (!empty($row["profile_image"])) {
+            $imagePath = $row["profile_image"];
+            // Check if file exists
+            if (file_exists($imagePath)) {
+                echo '<img src="' . htmlspecialchars($imagePath) . '" class="profile-img" alt="Profile Image">';
+            } else {
+                echo '<span class="file-missing">Image not found</span>';
+            }
+        } else {
+            echo '<span class="file-missing">No image</span>';
+        }
+        echo '</td>';
+
         echo "<td>" . htmlspecialchars($row["fullName"]) . "</td>";
         echo "<td>" . htmlspecialchars($row["email"]) . "</td>";
         echo "<td>{$row["dob"]}</td>";
@@ -123,6 +187,23 @@ if ($result && $result->num_rows > 0) {
         echo "<td>" . htmlspecialchars($row["nationality"]) . "</td>";
         echo "<td>" . htmlspecialchars($row["phone"]) . "</td>";
         echo "<td>" . htmlspecialchars($row["address"]) . "</td>";
+         // Display PDF link
+        echo '<td>';
+        if (!empty($row["pdf"])) {
+            $pdfPath = $row["pdf"];
+            // Check if file exists
+            if (file_exists($pdfPath)) {
+                echo '<a href="' . htmlspecialchars($pdfPath) . '" class="pdf-link" target="_blank">';
+                echo '<img src="https://cdn-icons-png.flaticon.com/512/337/337946.png" class="pdf-icon" alt="PDF">';
+                echo 'View PDF</a>';
+            } else {
+                echo '<span class="file-missing">PDF not found</span>';
+            }
+        } else {
+            echo '<span class="file-missing">No PDF</span>';
+        }
+        echo '</td>';
+
         echo '<td class="action-links">
                 <a href="update.php?id=' . $row["id"] . '">Edit</a>
                 <a href="delete.php?id=' . $row["id"] . '" onclick="return confirm(\'Are you sure?\')">Delete</a>
